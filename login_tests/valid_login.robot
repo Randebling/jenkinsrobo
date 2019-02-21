@@ -16,3 +16,11 @@ Valid Login
     Submit Credentials
     Welcome Page Should Be Open
     [Teardown]    Close Browser
+
+Go To Google
+    [Tags]              Google
+    Open Browser    ${GOOGLE}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Title Should Be    Google
+    [Teardown]    Close Browser
