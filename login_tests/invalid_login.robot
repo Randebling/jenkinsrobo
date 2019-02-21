@@ -12,6 +12,7 @@ Suite Teardown    Close Browser
 Test Setup        Go To Login Page
 Test Template     Login With Invalid Credentials Should Fail
 Resource          resource.robot
+Force Tags        Invalid Login
 
 *** Test Cases ***               USER NAME        PASSWORD
 Invalid Username                 invalid          ${VALID PASSWORD}
@@ -23,7 +24,6 @@ Empty Username And Password      ${EMPTY}         ${EMPTY}
 
 *** Keywords ***
 Login With Invalid Credentials Should Fail
-    [Tags]              Invalid Login
     [Arguments]    ${username}    ${password}
     Input Username    ${username}
     Input Password    ${password}
