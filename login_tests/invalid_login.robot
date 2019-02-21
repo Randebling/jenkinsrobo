@@ -23,6 +23,7 @@ Empty Username And Password      ${EMPTY}         ${EMPTY}
 
 *** Keywords ***
 Login With Invalid Credentials Should Fail
+    [Tags]              Invalid Login
     [Arguments]    ${username}    ${password}
     Input Username    ${username}
     Input Password    ${password}
