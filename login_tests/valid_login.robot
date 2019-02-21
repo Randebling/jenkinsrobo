@@ -23,4 +23,5 @@ Go To Google
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Title Should Be    Google
+    Title Should Be    Google
     [Teardown]    Close Browser
