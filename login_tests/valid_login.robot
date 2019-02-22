@@ -23,5 +23,12 @@ Go To Google
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Title Should Be    Google
-    Title Should Be    Google
+    [Teardown]    Close Browser
+
+Go To Nettiauto
+    [Tags]              nettiauto
+    Open Browser    http://www.nettiauto.com    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Title Should Be    Nettiauto
     [Teardown]    Close Browser
