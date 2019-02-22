@@ -25,10 +25,10 @@ Go To Google
     Title Should Be    Google
     [Teardown]    Close Browser
 
-Go To Nettiauto
-    [Tags]              nettiauto
-    Open Browser    http://www.nettiauto.com    ${BROWSER}
+Go To https://duckduckgo.com/
+    [Tags]              duckduckgo
+    Open Browser    https://duckduckgo.com/    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
-    Title Should Be    Nettiauto
+    Page Should Contain    DuckDuckGO
     [Teardown]    Close Browser
