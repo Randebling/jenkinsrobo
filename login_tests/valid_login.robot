@@ -36,7 +36,7 @@ Go To https://duckduckgo.com/
 
 Go To Iltalehti
     [Tags]              SMOKE
-    Open Browser    www.iltalehti.fi    Firefox
+    Open Browser    http://www.iltalehti.fi    Safari
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Page Should Contain    Iltalehti
