@@ -5,6 +5,7 @@ Documentation     A test suite with a single Gherkin style test.
 ...               valid_login.robot file.
 Resource          resource.robot
 Test Teardown     Close Browser
+Force Tags        FULL
 
 *** Test Cases ***
 Valid Login
