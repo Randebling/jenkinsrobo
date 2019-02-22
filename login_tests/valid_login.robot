@@ -4,14 +4,13 @@ Documentation     A test suite with a single test for valid login.
 ...               This test has a workflow that is created using keywords in
 ...               the imported resource file.
 Resource          resource.robot
-Force Tags        FULL      SMOKE
 
 
 
 
 *** Test Cases ***
 Valid Login
-    [Tags]              Valid Login
+    [Tags]              SMOKE
     Open Browser To Login Page
     Input Username    demo
     Input Password    mode
@@ -20,7 +19,7 @@ Valid Login
     [Teardown]    Close Browser
 
 Go To Google
-    [Tags]              Google
+    [Tags]              SMOKE
     Open Browser    ${GOOGLE}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
@@ -28,9 +27,17 @@ Go To Google
     [Teardown]    Close Browser
 
 Go To https://duckduckgo.com/
-    [Tags]              duckduckgo
+    [Tags]              SMOKE
     Open Browser    https://duckduckgo.com/    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Page Should Contain    DuckDuckGo
+    [Teardown]    Close Browser
+
+Go To Iltalehti
+    [Tags]              SMOKE
+    Open Browser    www.iltalehti.fi    Firefox
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Page Should Contain    Iltalehti
     [Teardown]    Close Browser
